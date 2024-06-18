@@ -1,0 +1,39 @@
+{
+  "name": "skale-api-distribution-nodejs",
+  "version": "0.1.0",
+  "description": "SKALE API Distribution Example",
+  "main": "./src/index.ts",
+  "repository": "git@github.com:skalenetwork/recipes.git",
+  "author": "TheGreatAxios <sawyer.cutler@gmail.com>",
+  "contributors": [
+    "Greg Thomas Andes <andesgregthomas3@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "dotenv-safe": "^9.1.0",
+    "ethers": "^6.3.0",
+    "express": "5.0.0-beta.1",
+    "express-rate-limit": "^7.3.1",
+    "express-validator": "^7.1.0",
+    "helmet": "^6.1.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/dotenv-safe": "^8.1.6",
+    "@types/express": "^4.17.21",
+    "@types/helmet": "^4.0.0",
+    "@types/node": "^20.14.2",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "pm2 start ecosystem.config.js",
+    "dev": "nodemon --watch ./src/index.ts --exec ts-node ./src/index.ts"
+  }
+}
